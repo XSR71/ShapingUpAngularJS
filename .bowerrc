@@ -1,0 +1,4 @@
+{
+	"proxy":"http://prxrj.prevnet:8080",
+	"https-proxy":"http://prxrj.prevnet:8080"
+}

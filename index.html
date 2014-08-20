@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"> 
+<html ng-app="store">
+<head>
+
+<!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body ng-controller="StoreController as store">
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<header>
+	<h2 class="text-center">Gem Store</h2>
+</header>
+
+<ul class="list-group">
+	<li class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
+
+		<product-title></product-title>
+
+		<product-tabs></product-tabs>
+
+
+	</li>
+</ul>
+
+</body>
+
+</html>
